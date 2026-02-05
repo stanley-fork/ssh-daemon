@@ -20,58 +20,11 @@
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
 
-#-dontshrink
-#-dontoptimize
-#-dontpreverify
--verbose
-
--dontwarn javax.management.**
--dontwarn javax.annotation.**
--dontwarn java.lang.management.**
--dontwarn org.apache.log4j.**
--dontwarn org.apache.commons.logging.**
--dontwarn org.slf4j.**
--dontwarn org.json.**
--dontwarn java.rmi.**
--dontwarn javax.lang.**
--dontwarn javax.naming.**
--dontwarn javax.security.auth.**
--dontwarn org.apache.tomcat.jni.**
--dontwarn org.ietf.jgss.**
--dontwarn org.hamcrest.**
--dontwarn org.junit.**
--dontwarn org.opentest4j.**
--dontwarn org.w3c.dom.bootstrap.**
--dontwarn edu.umd.cs.findbugs.**
--dontwarn com.android.org.conscrypt.**
--dontwarn org.apache.harmony.xnet.provider.**
-
-
--keep public class * extends android.app.Activity
--keep public class * extends android.app.Application
--keep public class * extends android.app.Service
--keep public class * extends android.content.BroadcastReceiver
--keep public class * extends android.content.ContentProvider
--keep public class * extends android.app.backup.BackupAgentHelper
--keep public class * extends android.preference.Preference
--keep class com.android.org.conscrypt.** { *; }
--keep class org.apache.harmony.xnet.provider.** { *; }
--keep class javax** { *; }
--keep class org** { *; }
-
--keepclasseswithmembers class * {
-    native <methods>;
-}
-
--keepclasseswithmembers class * {
-    public <init>(android.content.Context, android.util.AttributeSet);
-}
-
--keepclasseswithmembers class * {
-    public <init>(android.content.Context, android.util.AttributeSet, int);
-}
-
--keepclassmembers enum * {
-    public static **[] values();
-    public static ** valueOf(java.lang.String);
-}
+-dontwarn java.beans.BeanInfo
+-dontwarn java.beans.IntrospectionException
+-dontwarn java.beans.Introspector
+-dontwarn java.beans.PropertyDescriptor
+-dontwarn javax.management.MBeanException
+-dontwarn javax.management.ReflectionException
+-dontwarn javax.security.auth.login.CredentialException
+-dontwarn javax.security.auth.login.FailedLoginException

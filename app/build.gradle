@@ -19,8 +19,7 @@ android {
 
     buildTypes {
         release {
-            minifyEnabled = true
-            shrinkResources = true
+            minifyEnabled = false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
@@ -60,6 +59,7 @@ android {
         abortOnError = true
         warningsAsErrors = true
         checkDependencies = true
+        checkReleaseBuilds = true
     }
 
     tasks.withType(JavaCompile).configureEach {
